@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kegiatan - Organisasi Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo Group -->
+        <div class="logo-group">
+            <img src="images/logo1.png" alt="Logo 1">
+            <img src="images/logo2.png" alt="Logo 2">
+        </div>
+        <h1>Halaman Anggota</h1>
+        <button id="logout-btn">Logout</button>
+    </header>
+
+    <div class="container">
+        <!-- Form Tambah Kegiatan (Hanya untuk Pengurus Harian) -->
+        <form id="kegiatan-form" class="hidden">
+            <h2>Tambah Kegiatan Baru</h2>
+            <input type="text" id="nama-kegiatan" placeholder="Nama Kegiatan" required>
+            <input type="date" id="tanggal-kegiatan" required>
+            <textarea id="deskripsi-kegiatan" placeholder="Deskripsi Kegiatan" required></textarea>
+            <button type="submit">Simpan Kegiatan</button>
+        </form>
+
+        <!-- Tabel Daftar Kegiatan -->
+        <h2>Daftar Kegiatan</h2>
+        <table id="kegiatan-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Kegiatan</th>
+                    <th>Tanggal</th>
+                    <th>Deskripsi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data kegiatan akan diisi oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script> document.getElementById('logout-btn').addEventListener('click', function() {
+        localStorage.removeItem('username');
+        localStorage.removeItem('role');
+        window.location.href = 'index.html';
+    }); </script>
+    <script src="kegiatan.js"></script>
+</body>
+</html>

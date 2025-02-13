@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventaris - Organisasi Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo Group -->
+        <div class="logo-group">
+            <img src="images/logo1.png" alt="Logo 1">
+            <img src="images/logo2.png" alt="Logo 2">
+        </div>
+        <h1>Inventaris Organisasi</h1>
+        <button id="logout-btn">Logout</button>
+    </header>
+    <div class="container">
+        <!-- Form Tambah Inventaris (Hanya untuk Pengurus Harian) -->
+        <form id="inventaris-form" class="hidden">
+            <h2>Tambah Barang Inventaris</h2>
+            <input type="text" id="nama-barang" placeholder="Nama Barang" required>
+            <input type="number" id="jumlah" placeholder="Jumlah" required>
+            <input type="number" id="tahun" placeholder="Tahun" required>
+            <input type="text" id="kondisi" placeholder="Kondisi" required>
+            <button type="submit">Simpan Barang</button>
+        </form>
+
+        <!-- Tabel Daftar Inventaris -->
+        <h2>Daftar Inventaris</h2>
+        <table id="inventaris-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Barang</th>
+                    <th>Jumlah</th>
+                    <th>Tahun</th>
+                    <th>Kondisi</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data inventaris akan diisi oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="inventaris.js"></script>
+</body>
+</html>

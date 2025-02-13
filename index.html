@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Organisasi Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Logo Group -->
+        <div class="logo-group">
+            <img src="images/logo1.png" alt="Logo 1">
+            <img src="images/logo2.png" alt="Logo 2">
+        </div>
+        <h2>PAC IPNU IPPNU KEC. NGADILUWIH
+            2024-2025
+        </h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            
+            <label for="role">Login Sebagai:</label>
+            <select id="role">
+                <option value="anggota">Anggota</option>
+                <option value="pengurus">Pengurus Harian</option>
+            </select>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

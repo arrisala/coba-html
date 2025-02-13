@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Organisasi Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo Group -->
+        <div class="logo-group">
+            <img src="images/logo1.png" alt="Logo 1">
+            <img src="images/logo2.png" alt="Logo 2">
+        </div>
+        <h1>Dashboard Organisasi</h1>
+        <button id="logout-btn">Logout</button>
+    </header>
+    <div class="dashboard-container">
+        <h2>Selamat Datang di Dashboard Organisasi</h2>
+        <nav>
+            <a href="anggota.html">Anggota</a>
+            <a href="kegiatan.html">Kegiatan</a>
+            <a href="inventaris.html">Inventaris</a>
+        </nav>
+    </div>
+    <script>
+        // Logout Functionality
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            localStorage.removeItem('username');
+            localStorage.removeItem('role');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

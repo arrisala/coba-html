@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anggota - Organisasi Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo Group -->
+        <div class="logo-group">
+            <img src="images/logo1.png" alt="Logo 1">
+            <img src="images/logo2.png" alt="Logo 2">
+        </div>
+        <h1>Daftar Anggota</h1>
+        <button id="logout-btn">Logout</button>
+    </header>
+    <div class="container">
+        <!-- Form Tambah Anggota (Hanya untuk Pengurus Harian) -->
+        <form id="anggota-form" class="hidden">
+            <h2>Tambah Anggota Baru</h2>
+            <input type="text" id="nama-anggota" placeholder="Nama Anggota" required>
+            <input type="text" id="jabatan-anggota" placeholder="Jabatan" required>
+            <button type="submit">Simpan Anggota</button>
+        </form>
+
+        <!-- Tabel Daftar Anggota -->
+        <h2>Daftar Anggota</h2>
+        <table id="anggota-table">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Jabatan</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data anggota akan diisi oleh JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="anggota.js"></script>
+</body>
+</html>
